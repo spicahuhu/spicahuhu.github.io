@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="一叶清尘">
 <meta property="og:description" content="CENTOS下安装 安装erlang12345wget http://www.erlang.org/download/otp_src_18.3.tar.gztar -zxvf otp_src_18.3.tar.gzcd otp_src_18.3/./configure --prefix=/usr/local/erlangmake &amp;amp;&amp;amp; make install   配置环境变量vi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-01T07:28:11.158Z">
+<meta property="og:updated_time" content="2018-08-01T07:51:06.769Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="rabbitmq安装和使用">
 <meta name="twitter:description" content="CENTOS下安装 安装erlang12345wget http://www.erlang.org/download/otp_src_18.3.tar.gztar -zxvf otp_src_18.3.tar.gzcd otp_src_18.3/./configure --prefix=/usr/local/erlangmake &amp;amp;&amp;amp; make install   配置环境变量vi">
@@ -464,17 +464,6 @@ rabbitmqctl forget_cluster_node rabbit1 删除集群节点
 <li>集群添加时候 Error: mnesia_not_running？<br> rabbitmqctl start_app<br> 如果是单机集群，rabbitmqctl -n rabbit2 start_app<br> rabbitmqctl join_cluster rabbit2@localhost。将rabbit2加入到集群中</li>
 <li>disk space full<br>清理磁盘空间，在rabbitmq-env.conf中修改日志和mnesia数据库的位置</li>
 </ol>
-<h4 id="Q-amp-A-1"><a href="#Q-amp-A-1" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h4><ol>
-<li>guest 登陆不了？<br> 由于guest账号有所有操作权限，安全起见，guest只能通过localhost登陆。如果要使用其他id登陆guest。<ul>
-<li>可删除rabbitmq/ebin/rabbit.app中的loopback_users的guest</li>
-<li>rabbitmqctl add_user name pwd 新增一个用户吧。注意如果新增的是普通用户依然无法登陆到rabbitmq_management。所以需要给新增用户分配角色。rabbitmqctl set_user_tags 用户名 monitoring policymaker  设置用户为monitoring(监控者，可查看节点信息) policymaker(policy管理者)</li>
-</ul>
-</li>
-</ol>
-<ol>
-<li>集群添加时候 Error: mnesia_not_running？<br> rabbitmqctl start_app<br> 如果是单机集群，rabbitmqctl -n rabbit2 start_app<br> rabbitmqctl join_cluster rabbit2@localhost。将rabbit2加入到集群中</li>
-<li>disk space full<br>清理磁盘空间，在rabbitmq-env.conf中修改日志和mnesia数据库的位置</li>
-</ol>
 
       
     </div>
@@ -618,7 +607,7 @@ rabbitmqctl forget_cluster_node rabbit1 删除集群节点
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -640,7 +629,7 @@ rabbitmqctl forget_cluster_node rabbit1 删除集群节点
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -719,7 +708,7 @@ rabbitmqctl forget_cluster_node rabbit1 删除集群节点
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#CENTOS下安装"><span class="nav-number">1.</span> <span class="nav-text">CENTOS下安装</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插件"><span class="nav-number"></span> <span class="nav-text">插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-number"></span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#新增用户"><span class="nav-number">1.</span> <span class="nav-text">新增用户</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#设置角色"><span class="nav-number">2.</span> <span class="nav-text">设置角色</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#设置权限"><span class="nav-number">3.</span> <span class="nav-text">设置权限</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#vhost管理"><span class="nav-number">4.</span> <span class="nav-text">vhost管理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#集群相关"><span class="nav-number">5.</span> <span class="nav-text">集群相关</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#host配置"><span class="nav-number">6.</span> <span class="nav-text">host配置</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-amp-A"><span class="nav-number"></span> <span class="nav-text">Q&amp;A</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-amp-A-1"><span class="nav-number"></span> <span class="nav-text">Q&amp;A</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#CENTOS下安装"><span class="nav-number">1.</span> <span class="nav-text">CENTOS下安装</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插件"><span class="nav-number"></span> <span class="nav-text">插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-number"></span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#新增用户"><span class="nav-number">1.</span> <span class="nav-text">新增用户</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#设置角色"><span class="nav-number">2.</span> <span class="nav-text">设置角色</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#设置权限"><span class="nav-number">3.</span> <span class="nav-text">设置权限</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#vhost管理"><span class="nav-number">4.</span> <span class="nav-text">vhost管理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#集群相关"><span class="nav-number">5.</span> <span class="nav-text">集群相关</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#host配置"><span class="nav-number">6.</span> <span class="nav-text">host配置</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Q-amp-A"><span class="nav-number"></span> <span class="nav-text">Q&amp;A</span></a></div>
             
 
           </div>
